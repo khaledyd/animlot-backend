@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: ["https://animlot.netlify.app", "http://localhost:3000"],
+    origin: "https://animlot.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
