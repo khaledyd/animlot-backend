@@ -15,7 +15,7 @@ const app = express();
 dotenv.config();
 app.use(express.json());
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://animlot.netlify.app/");
+  res.header("Access-Control-Allow-Origin", "https://animlot.netlify.app");
   res.header("Access-Control-Allow-Credentials", "true");
   next();
 });
@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: ["https://animlot.netlify.app/", "http://localhost:3000"],
+    origin: ["https://animlot.netlify.app", "http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
@@ -69,7 +69,7 @@ app.use((err, req, res, next) => {
 connect().then(() => {
   app.listen(5002, () => {
     connect();
-    console.log("Connected to Server");
+    console.log("Connected to Server!");
   });
 });
 
