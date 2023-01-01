@@ -5,9 +5,9 @@ import { verifyToken } from "../verifyToken.js";
 const router = express.Router();
 
 //create a video
-router.post("/",  addVideo)
+router.post("/uploaded",  addVideo)
 router.put("/:id",  addVideo)
-router.delete("/:id", addVideo)
+router.delete("/:id",  addVideo)
 router.get("/find/:id", getVideo)
 router.put("/view/:id", addView)
 router.get("/trend", trend)
