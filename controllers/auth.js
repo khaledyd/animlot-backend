@@ -77,7 +77,7 @@ export const signin = async (req, res, next) => {
         httpOnly: true,
       })
       .status(200)
-      .json(others);
+      .json({data1 :others ,  data2: token});
   } catch (err) {
     next(err);
   }
